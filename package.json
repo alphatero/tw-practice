@@ -1,0 +1,20 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "cross-env TAILWIND_MODE=watch vite",
+    "build": "cross-env TAILWIND_MODE=build vite build ",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vitawind": "^1.2.9",
+    "vite": "^2.4.4",
+    "vite-plugin-pug": "^0.3.0"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.11",
+    "cross-env": "^7.0.3",
+    "jquery": "^3.6.0",
+    "pug": "^3.0.2",
+    "swiper": "^7.3.1"
+  }
+}

@@ -1,0 +1,148 @@
+block content 
+  main.contant.main
+    form.py-6(method="POST")
+      section.max-w-3xl.mx-auto
+        h2.title.mb-12 INQUIRY FORM諮詢表
+        .flex.flex-col.py-3.gap-4
+          h3.font-medium.text-2xl.text-center.py-4 顧客資料填寫
+          .flex.gap-4.items-center
+            label(for="name").input-title 姓名
+            input#name(type="text", name="name").border.rounded.flex-1.p-1
+          .flex.gap-4.items-center
+            label(for="email").input-title 電子郵件
+            input#email(type="email", name="email").border.rounded.flex-1.p-1
+          .flex.gap-4.items-center
+            label(for="tel").input-title 連絡電話
+            input#tel(type="tel", name="tel").border.rounded.flex-1.p-1
+          .flex.gap-4.justify-start(class="flex-col md:flex-row")
+            .flex.items-center.gap-4
+              label(for="").input-title 裝修經驗
+              input#exp_yes(type="radio", name="exp_yes", class="px-4")
+              label(for="exp_yes") 是 
+              input#exp_no(type="radio", name="exp_no", class="px-4")
+              label(for="exp_no") 否
+            .flex.gap-4.items-center
+             label(for="times", class="min-w-[100px] md:text-center") 次數
+             input#times(type="number", name="times").border.rounded.flex-1.p-1
+          .flex.gap-4.justify-start(class="flex-col md:flex-row")
+            .flex.items-center.gap-4(class="md:w-1/2")
+              label(for="", class="min-w-[100px] px-4") 聯絡時間
+              select#call_time(name="call_time", class="border rounded flex-1 p-1")
+                option(value="", selected, disabled)  請選擇
+                option(value="0913") 9時 ~ 13時
+                option(value="1317") 13時 ~ 17時
+                option(value="1721") 17時 ~ 21時
+                option(value="not") 不指定
+            .flex.gap-4.items-center(class="md:w-1/2")
+             label(for="week", class="min-w-[100px] md:text-center") 星期
+             select#week(name="week", class="border rounded flex-1 p-1")
+              option(value="", selected, disabled)  請選擇
+              option(value="1") 星期一
+              option(value="2") 星期二
+              option(value="3") 星期三
+              option(value="4") 星期四
+              option(value="5") 星期五
+              option(value="6") 星期六
+              option(value="0") 星期日
+              option(value="not") 不指定
+        .flex.flex-col.py-3.gap-4
+          h3.font-medium.text-2xl.text-center.py-4 空間設計資料
+          .flex.gap-4.justify-start(class="flex-col md:flex-row")
+            .flex.items-center.gap-4(class="md:w-1/2")
+              label(for="").input-title 空間類別
+              select#area_archive(name="area_archive", class="border rounded flex-1 p-1")
+                option(value="", selected, disabled)  請選擇
+                option(value="別墅") 別墅
+                option(value="店面") 店面
+                option(value="新成屋") 新成屋
+                option(value="預售屋") 預售屋
+                option(value="公寓大廈") 公寓大廈
+                option(value="獨棟透天") 獨棟透天
+                option(value="工商廠辦") 工商廠辦
+                option(value="其他") 其他
+            .flex.gap-4.items-center(class="md:w-1/2")
+              label(for="").input-title 喜好風格
+              select#like(name="like", class="border rounded flex-1 p-1")
+                option(value="", selected, disabled)  請選擇
+                option(value="現代風") 現代風
+                option(value="北歐風") 北歐風
+                option(value="工業風") 工業風
+                option(value="鄉村風") 鄉村風
+                option(value="簡約風") 簡約風
+                option(value="其他") 其他
+          .flex.gap-4.justify-start(class="flex-col md:flex-row")
+            .flex.items-center.gap-4(class="md:w-1/2")
+              label(for="").input-title 預算金額
+              select#area_archive(name="area_archive", class="border rounded flex-1 p-1")
+                option(value="", selected, disabled)  請選擇
+                option(value="20萬~30萬") 20萬~30萬
+                option(value="30萬~50萬") 30萬~50萬
+                option(value="50萬~100萬") 50萬~100萬
+                option(value="100萬~150萬") 100萬~150萬
+                option(value="150萬~200萬") 150萬~200萬
+                option(value="200萬~500萬") 200萬~500萬
+                option(value="500萬~1000萬") 500萬~1000萬
+                option(value="1000萬以上") 1000萬以上
+            .flex.gap-4.items-center(class="md:w-1/2")
+              label(for="member", class="min-w-[100px] md:text-center px-4") 使用成員（人數）
+              input#member(type="number", name="member").border.rounded.p-1.flex-1
+        .flex.flex-col.py-3.gap-4
+          h3.font-medium.text-2xl.text-center.py-4 預計規劃空間
+          .flex.gap-4.items-center
+            label(for="build_case_name").input-title 建案名稱
+            input#build_case_name(type="text", name="build_case_name").border.rounded.flex-1.p-1
+          .flex.gap-4.items-center
+            label(for="build_case_addr").input-title 建案地址
+            input#build_case_addr(type="text", name="build_case_addr").border.rounded.flex-1.p-1
+          .flex.gap-4
+            label(for="brief_description", class="min-w-[100px] md:text-center px-4") 需求簡述
+            textarea#brief_description(name="brief_description", rows="3").border.rounded.flex-1.p-1
+          .grid.grid-cols-3.gap-6(class="md:grid-cols-5")
+            div
+              label(for="bedroom").text-sm 房數
+              input#bedroom(type="number", name="bedroom", class="border rounded p-1 w-full") 
+            div
+              label(for="living_room").text-sm 廳數
+              input#living_room(type="number", name="living_room", class="border rounded p-1 w-full") 
+            div
+              label(for="bathroom").text-sm 衛數
+              input#bathroom(type="number", name="bathroom", class="border rounded p-1 w-full") 
+            div
+              label(for="kitchen").text-sm 廚數
+              input#kitchen(type="number", name="kitchen", class="border rounded p-1 w-full") 
+            div
+              label(for="balcony").text-sm 陽台
+              input#balcony(type="number", name="balcony", class="border rounded p-1 w-full") 
+          .flex.gap-4.justify-start(class="flex-col md:flex-row")
+            .flex.items-center.gap-4.flex-1
+              label(for="").input-title 是否交屋
+              input#handover-y(type="radio", name="handover-y", class="px-4")
+              label(for="handover-y") 是 
+              input#handover-n(type="radio", name="handover-n", class="px-4")
+              label(for="handover-n") 否
+            .flex.items-center.gap-4.flex-1
+              label(for="").input-title 能否勘場
+              input#site-survey-y(type="radio", name="site-survey-y", class="px-4")
+              label(for="site-survey-y") 是 
+              input#site-survey-n(type="radio", name="site-survey-n", class="px-4")
+              label(for="site-survey-n") 否
+
+          .flex.gap-4.justify-start(class="flex-col md:flex-row")
+            .flex.items-center.gap-4(class="md:w-1/2")
+              label(for="").input-title 坪數
+              select#size(name="size", class="border rounded flex-1 p-1")
+                option(value="", selected, disabled)  請選擇
+                option(value="30donw") 30坪以下
+                option(value="30~40") 30~40坪
+                option(value="40~60") 40~60坪
+                option(value="60~100") 60~100坪
+                option(value="100up") 100坪以上
+            .flex.gap-4.items-center(class="md:w-1/2")
+              label(for="file", class="min-w-[100px] md:text-center px-4") 相關檔案
+              input#file(type="file", name="file")
+          .flex-col.border-t.justify-center.text-center.py-4
+            label(for="verification").px-4 驗證碼
+            input#verification(type="text", name="verification").border.p-1.rounded
+            a(href="#").px-4 verification
+      .flex.justify-center.items-center.py-6
+        button(type="submit").py-2.px-4.rounded-full.bg-grayer-200.shadow-blur 確認送出
