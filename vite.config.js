@@ -11,6 +11,10 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "about.html"),
+        contact: resolve(__dirname, "contact.html"),
+        workplace: resolve(__dirname, "workplace.html"),
+        workplaceList: resolve(__dirname, "workplace-list.html"),
+        workplaceDetail: resolve(__dirname, "workplace-detail.html"),
       },
     },
   },
